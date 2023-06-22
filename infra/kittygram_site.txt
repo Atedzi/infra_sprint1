@@ -1,0 +1,5 @@
+IP: 84.201.177.236;
+name_taski: https://tasksandexecution.hopto.org/;
+name_kittygram: https://kittyks.hopto.org/;
+login: admin;
+password: A147852a;
