@@ -6,11 +6,11 @@ load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.getenv(SecretToken)
+SECRET_KEY = os.getenv('SecretToken')
 
-DEBUG = os.getenv(Debug)
+DEBUG = os.getenv('Debug')
 
-ALLOWED_HOSTS = os.getenv(Hosts)
+ALLOWED_HOSTS = os.getenv('Hosts')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
