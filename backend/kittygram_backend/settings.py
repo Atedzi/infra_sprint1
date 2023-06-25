@@ -8,10 +8,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv('SK', default=True)
 
-#DEBUG = os.getenv('Debug')
-DEBUG = False
-#ALLOWED_HOSTS = os.getenv('Hosts')
-ALLOWED_HOSTS = ['84.201.177.236', '127.0.0.1', 'localhost']
+DEBUG = os.getenv('Debug') == 'True'
+
+ALLOWED_HOSTS = os.getenv('Hosts').split()
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
