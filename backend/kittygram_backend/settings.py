@@ -10,7 +10,7 @@ SECRET_KEY = os.getenv('SK', default=True)
 
 DEBUG = os.getenv('Debug') == 'True'
 
-ALLOWED_HOSTS = os.getenv('Hosts').split()
+ALLOWED_HOSTS = os.getenv('Hosts', '').split(',')
 
 
 INSTALLED_APPS = [
