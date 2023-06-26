@@ -2,11 +2,13 @@ import os
 from pathlib import Path
 from dotenv import load_dotenv
 
-load_dotenv()
+#load_dotenv()
+env_path = Path(__file__).resolve().parent.parent / '.env'
+load_dotenv(env_path)
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.getenv('SK', default = '')
+SECRET_KEY = os.getenv('SK')
 
 DEBUG = os.getenv('Debug')
 
