@@ -1,6 +1,7 @@
 import os
 from pathlib import Path
 from dotenv import load_dotenv
+from distutils.util import strtobool
 
 load_dotenv()
 
@@ -8,7 +9,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv('SK', default='True')
 
-DEBUG = bool(os.getenv('Debug'))
+#DEBUG = bool(os.getenv('Debug'))
+DEBUG = bool(strtobool(os.getenv('Debug', default='False')))
 
 ALLOWED_HOSTS = os.getenv('Hosts', '').split(' ')
 
